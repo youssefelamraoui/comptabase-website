@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileToggle.addEventListener('click', () => {
       const isOpen = mobileNavPanel.classList.toggle('is-open');
       mobileToggle.setAttribute('aria-expanded', String(isOpen));
-      mobileToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+      mobileToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
     });
 
     // Close mobile nav when clicking any link inside it
@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
         await navigator.clipboard.writeText(emailText);
         const originalHtml = copyBtn.innerHTML;
         copyBtn.innerHTML = `
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#34D399;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#34D399;" aria-hidden="true">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
-          <span>Copié !</span>
+          <span>Copied!</span>
         `;
         setTimeout(() => {
           copyBtn.innerHTML = originalHtml;
@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
         input.select();
         document.execCommand('copy');
         document.body.removeChild(input);
-        copyBtn.textContent = 'Copié !';
+        copyBtn.textContent = 'Copied!';
         setTimeout(() => {
-          copyBtn.textContent = 'Copier';
+          copyBtn.textContent = 'Copy';
         }, 2500);
       }
     });
@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tabBQ.classList.remove('active');
       journalRowsHA.style.display = '';
       journalRowsBQ.style.display = 'none';
-      if (journalTitle) journalTitle.textContent = 'HA — Journal des Achats (Octobre 2026)';
-      if (journalStatus) journalStatus.innerHTML = '<span class="mockup-dot green"></span> Équilibré : 14 400,00 DH';
+      if (journalTitle) journalTitle.textContent = 'HA — Purchases Journal (October 2026)';
+      if (journalStatus) journalStatus.innerHTML = '<span class="mockup-dot green"></span> Balanced: 14,400.00 MAD';
     });
 
     tabBQ.addEventListener('click', () => {
@@ -91,8 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tabHA.classList.remove('active');
       journalRowsHA.style.display = 'none';
       journalRowsBQ.style.display = '';
-      if (journalTitle) journalTitle.textContent = 'BQ — Journal de Banque (Attijariwafa Bank)';
-      if (journalStatus) journalStatus.innerHTML = '<span class="mockup-dot green"></span> Équilibré : 14 400,00 DH';
+      if (journalTitle) journalTitle.textContent = 'BQ — Bank Journal (Demo Account)';
+      if (journalStatus) journalStatus.innerHTML = '<span class="mockup-dot green"></span> Balanced: 14,400.00 MAD';
     });
   }
 });

@@ -1,70 +1,59 @@
 # ComptaBase — Official Website
 
-Official landing page and technical overview for **ComptaBase**, an accounting and financial management platform engineered for Moroccan SMEs and accounting professionals.
+Public website and project overview for **ComptaBase**, an accounting and financial management software initiative focused on Moroccan SMEs and accounting professionals.
 
 ## 1. Project Overview
 
-ComptaBase is an independent software project focused on:
-- Robust double-entry bookkeeping conforming to the Plan Comptable Général Marocain (PCGM).
-- Multi-journal architecture (Achats, Ventes, Banque, Caisse, OD).
-- Real-time arithmetic equilibrium enforcement (Debit = Credit).
-- Auxiliary accounts and lettering (*lettrage*).
-- Moroccan tax metadata tracking (ICE, IF, RC, CNSS, Moroccan VAT encaissements / débits).
-- Human-in-the-loop AI assistance for document ingestion and invoice extraction (in active research and prototyping).
+ComptaBase is an independent software engineering initiative currently in active development. The platform is designed around:
+- Structured double-entry bookkeeping conforming to the Plan Comptable Général Marocain (PCGM).
+- Multi-journal architecture (Purchases, Sales, Bank, Cash, and Miscellaneous Operations).
+- Arithmetic balance validation controls (Debit = Credit) to prevent out-of-balance entries from posting.
+- Auxiliary sub-ledger accounts and lettering (*lettrage*).
+- Moroccan business identification fields (ICE, IF, RC, CNSS) and VAT parameterization.
+- Human-in-the-loop AI assistance concepts for document ingestion and entry suggestion (under research and prototyping).
 
-This website also serves as public technical documentation supporting our application to the **Claude for Startups** program.
+This website also serves as public technical documentation supporting an application to the **Claude for Startups** program.
+
+> **Project Boundary Note:** This repository contains the public static landing page and documentation. The core backend ERP and application repositories are managed separately.
 
 ## 2. Technical Stack
 
-- **Markup:** Semantic HTML5 (`index.html`, `404.html`)
-- **Styling:** Modern, responsive Vanilla CSS (`assets/css/style.css`)
-- **Scripting:** Minimal, dependency-free Vanilla JavaScript (`assets/js/main.js`)
-- **Design System:** Deep navy palette (`#060B17`), slate surfaces, emerald/mint accents (`#10B981`, `#34D399`)
-- **SEO & Social:** Canonical tags, Open Graph meta, Twitter card meta, XML sitemap, `robots.txt`
-- **Hosting:** GitHub Pages ($0 budget, static hosting)
-- **Domain:** `https://comptabase.com`
+- **Markup:** Semantic HTML5 (`index.html`, `404.html`) with `lang="en"`
+- **Styling:** Custom responsive CSS (`assets/css/style.css`)
+- **Scripting:** Minimal vanilla JavaScript (`assets/js/main.js`)
+- **Visual Design:** Deep navy palette (`#060B17`), slate surfaces, emerald/mint accents (`#10B981`, `#34D399`)
+- **SEO & Social:** Canonical URL (`https://comptabase.com/`), Open Graph metadata, Twitter card tags, XML sitemap, `robots.txt`
+- **Hosting:** GitHub Pages (Static hosting)
+- **Production URL:** [https://comptabase.com](https://comptabase.com)
 
 ## 3. Repository Structure
 
 ```
-├── .nojekyll              # Bypasses Jekyll processing on GitHub Pages
+├── .nojekyll              # Disables Jekyll processing on GitHub Pages
 ├── 404.html               # Custom branded 404 error page
-├── CNAME                  # Custom domain configuration (comptabase.com)
-├── README.md              # Project documentation
-├── index.html             # Main landing page
+├── CNAME                  # Custom domain definition (comptabase.com)
+├── README.md              # Project and deployment documentation
+├── index.html             # Main public landing page
 ├── robots.txt             # Search engine crawler instructions
 ├── sitemap.xml            # Canonical XML sitemap
 └── assets/
     ├── css/
-    │   └── style.css      # Core stylesheet and design system
+    │   └── style.css      # Core design system and responsive layout
     ├── js/
-    │   └── main.js        # Navigation and interactive mockup logic
+    │   └── main.js        # Navigation and mockup tab interactivity
     ├── favicon.svg        # Vector monogram favicon
-    └── og-image.svg       # Open Graph social preview banner
+    └── og-image.svg       # Vector Open Graph social preview banner
 ```
 
-## 4. Namecheap DNS Configuration for `comptabase.com`
+## 4. Production Deployment & Domain Status
 
-To complete custom domain mapping in Namecheap DNS:
+- **Custom Domain:** `comptabase.com`
+- **DNS Hosting:** Namecheap DNS (Configured with apex A records pointing to GitHub Pages IP pool and `www` CNAME pointing to `youssefelamraoui.github.io`).
+- **Deployment Source:** GitHub Pages publishing from the `main` branch root `/(root)`.
+- **SSL / TLS:** Managed TLS certificate active on GitHub Pages.
 
-### A Records (Apex / Root `@`)
-Configure the following 4 GitHub Pages IP addresses:
+## 5. Contact & Disclaimers
 
-| Type | Host | Value | TTL |
-|------|------|-------|-----|
-| A | `@` | `185.199.108.153` | Automatic |
-| A | `@` | `185.199.109.153` | Automatic |
-| A | `@` | `185.199.110.153` | Automatic |
-| A | `@` | `185.199.111.153` | Automatic |
-
-### CNAME Record (Subdomain `www`)
-| Type | Host | Value | TTL |
-|------|------|-------|-----|
-| CNAME | `www` | `youssefelamraoui.github.io.` | Automatic |
-
-*Note: Maintain all existing MX and email-related TXT records intact to avoid disrupting email services for `founder@comptabase.com`.*
-
-## 5. Contact
-
-- **Email:** `founder@comptabase.com`
+- **Project Contact:** `founder@comptabase.com`
 - **Canonical Website:** [https://comptabase.com](https://comptabase.com)
+- **Legal Notice:** ComptaBase is an independent software project currently in development. It does not provide certified accounting, tax, or legal advice. System tax parameters must be validated against prevailing legislation (General Tax Code / CGI).
