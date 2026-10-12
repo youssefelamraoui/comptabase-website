@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0A1128"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" stroke="#1E293B" stroke-width="2"/>
+  <!-- Ledger Glyphs & Monogram -->
+  <path d="M18 20C18 16.6863 20.6863 14 24 14H38C40.2091 14 42 15.7909 42 18C42 20.2091 40.2091 22 38 22H26V28H36C38.2091 28 40 29.7909 40 32C40 34.2091 38.2091 36 36 36H26V42H39C41.2091 42 43 43.7909 43 46C43 48.2091 41.2091 50 39 50H24C20.6863 50 18 47.3137 18 44V20Z" fill="url(#cb-grad)"/>
+  <circle cx="45" cy="22" r="4" fill="#34D399"/>
+  <circle cx="46" cy="36" r="3" fill="#10B981" fill-opacity="0.7"/>
+  <defs>
+    <linearGradient id="cb-grad" x1="18" y1="14" x2="44" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+</svg>
